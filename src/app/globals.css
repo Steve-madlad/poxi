@@ -1,12 +1,13 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --font-dm-sans: var(--font-dm-sans);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
@@ -121,6 +122,9 @@
   .flex-center {
     @apply flex items-center justify-center;
   }
+  .flex-center-g3 {
+    @apply flex items-center justify-center gap-3;
+  }
   .flex-between {
     @apply flex items-center justify-between;
   }
@@ -175,8 +179,14 @@
   .abs-x-center {
     @apply absolute left-1/2 -translate-x-1/2;
   }
-  .abs-full-center {
-    @apply absolute left-1/2 right-1/2 -translate-1/2;
+  .abs-y-center {
+    @apply absolute top-1/2 -translate-y-1/2;
+  }
+  .abs-center {
+    @apply absolute right-1/2 left-1/2 -translate-1/2;
+  }
+  .abs-fill {
+    @apply absolute inset-0;
   }
   .card-shadow {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
@@ -194,6 +204,6 @@
     @apply bg-background text-foreground;
   }
   html {
-    @apply font-sans;
+    @apply font-dm-sans;
   }
 }
