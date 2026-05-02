@@ -1,12 +1,12 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { MoveRight } from 'lucide-react';
+import { Menu, MoveRight } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Header() {
   return (
-    <header className="sticky top-0">
+    <header className="sticky top-0 z-30 backdrop-blur-sm">
       <div className="flex-center gap-3 bg-black py-3 text-sm text-white">
         <p className="hidden text-white/60 md:block">
           Streamline your workflow and boost your productivity
@@ -16,7 +16,7 @@ export default function Header() {
           <MoveRight size={16} />
         </div>
       </div>
-      <div className="p-5 md:px-10 flex-center">
+      <div className="flex-center p-5 md:px-10">
         <div className="container">
           <div className="flex-between">
             <Image src="/logosaas.png" alt="logo" width={40} height={40} />
@@ -27,8 +27,14 @@ export default function Header() {
               <a href="#">Customers</a>
               <a href="#">Updates</a>
               <a href="#">Help</a>
-              <Button className="xy-center inline-flex rounded-lg bg-black p-4 font-medium tracking-tight text-white capitalize">Get for free</Button>
+              <Button className="xy-center inline-flex rounded-lg bg-black p-4 font-medium tracking-tight text-white capitalize">
+                Get for free
+              </Button>
             </nav>
+
+            <Button className='hover:bg-transparent md:hidden' variant={"ghost"}>
+              <Menu className='size-7'/>
+            </Button>
           </div>
         </div>
       </div>
