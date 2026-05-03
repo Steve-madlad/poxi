@@ -195,19 +195,25 @@
     display: none;
   }
   .main-container {
-    @apply container mx-auto 
+    @apply container mx-auto;
   }
 }
 
 @layer components {
   .btn {
-    @apply px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-medium tracking-tight;
   }
   .btn-primary {
-    @apply bg-black text-white
+    @apply bg-black text-white;
   }
   .btn-text {
-    @apply text-black bg-transparent
+    @apply bg-transparent text-black;
+  }
+  .tag {
+    @apply inline-flex rounded-lg border border-[#222]/10 px-3 py-1 text-sm tracking-tight;
+  }
+  .logo-ticker-image {
+    @apply h-8 w-auto;
   }
 }
 

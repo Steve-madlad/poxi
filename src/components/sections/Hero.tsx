@@ -20,8 +20,8 @@ export default function Hero() {
             </p>
 
             <div className="align-center mt-7.5 gap-1">
-              <Button className="btn btn-primary">Get for free</Button>
-              <Button className="btn-text gap-1">
+              <Button className="btn btn-primary p-5 rounded-sm">Get for free</Button>
+              <Button variant={"ghost"} className="btn-text gap-1">
                 <span>Learn more</span>
                 <MoveRight size="5" />
               </Button>
