@@ -5,7 +5,7 @@ import ProductShowcase from '@/components/sections/ProductShowcase';
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Header />
       <Hero />
       <LogoTicker />
