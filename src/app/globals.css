@@ -221,6 +221,15 @@
   .logo-ticker-image {
     @apply h-8 w-auto;
   }
+  .section-title {
+    @apply mt-5 bg-linear-to-b from-black to-[#001e80] bg-clip-text text-center text-3xl font-bold tracking-tighter text-transparent;
+  }
+  .section-description {
+    @apply mt-5 text-center text-[22px] leading-7.5 tracking-tight text-[#010d3e];
+  }
+  .section-heading {
+    @apply mx-auto max-w-135;
+  }
 }
 
 @layer base {

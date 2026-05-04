@@ -4,14 +4,12 @@ export default function ProductShowcase() {
   return (
     <section className="overflow-x-clip bg-linear-to-b from-white to-[#d3dcff] py-24">
       <div className="main-container">
-        <div className="mx-auto max-w-135 px-5">
+        <div className="section-heading px-5">
           <div className="just-center">
             <div className="tag">Boost your productivity</div>
           </div>
-          <h2 className="mt-5 bg-linear-to-b from-black to-[#001e80] bg-clip-text text-center text-3xl font-bold tracking-tighter text-transparent">
-            A more effective way to track progress
-          </h2>
-          <p className="text-22px leading-30px mt-5 text-center tracking-tight text-[#010d3e]">
+          <h2 className="section-title">A more effective way to track progress</h2>
+          <p className="section-description">
             Effortlessly turn your ideas into a fully functional, responsive Saas website in just
             minutes with this template.
           </p>
