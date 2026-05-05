@@ -8,7 +8,7 @@ import { Card } from '../ui/card';
 export default function Pricing() {
   return (
     <section className="overflow-x-hidden py-24">
-      <div className="main-container relative">
+      <div className="main-container relative px-5">
         <div className="section-heading px-5">
           <h2 className="section-title">Pricing</h2>
           <p className="section-description">
