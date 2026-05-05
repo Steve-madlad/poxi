@@ -27,11 +27,11 @@ export default function CallToAction() {
             alt="Spring Image"
           />
         </div>
-        <div className="just-center mt-10 gap-2">
+        <div className="flex-center mt-10 gap-2">
           <Button className="btn btn-primary rounded-sm p-5">Get for free</Button>
-          <Button variant={'ghost'} className="btn-text gap-1">
+          <Button variant={'ghost'} className="btn-text p-5 rounded-sm hover:bg-transparent group gap-2">
             <span>Learn more</span>
-            <MoveRight size="5" />
+            <MoveRight className='duration-150 group-hover:translate-x-2' size="5" />
           </Button>
         </div>
       </div>

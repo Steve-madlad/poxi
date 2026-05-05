@@ -1,4 +1,5 @@
 import CallToAction from '@/components/sections/CallToAction';
+import Footer from '@/components/sections/Footer';
 import Header from '@/components/sections/Header';
 import Hero from '@/components/sections/Hero';
 import LogoTicker from '@/components/sections/LogoTicker';
@@ -16,6 +17,7 @@ export default function Home() {
       <Pricing />
       <Testimonials />
       <CallToAction />
+      <Footer />
     </div>
   );
 }
