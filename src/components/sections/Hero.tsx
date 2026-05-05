@@ -1,6 +1,7 @@
 import { MoveRight } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '../ui/button';
+import PrimaryButton from '../ui/custom/PrimaryButton';
 
 export default function Hero() {
   return (
@@ -20,11 +21,11 @@ export default function Hero() {
             </p>
 
             <div className="align-center mt-7.5 gap-1">
-              <Button className="btn btn-primary p-5 rounded-sm">Get for free</Button>
-              <Button variant={"ghost"} className="btn-text gap-1">
+              <PrimaryButton>Get for free</PrimaryButton>
+              <PrimaryButton variant={"ghost"} className="hover:bg-transparent group gap-2">
                 <span>Learn more</span>
-                <MoveRight size="5" />
-              </Button>
+                <MoveRight className='group-hover:translate-x-2  duration-150' />
+              </PrimaryButton>
             </div>
             <div className=""></div>
           </div>

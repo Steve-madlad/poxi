@@ -1,6 +1,6 @@
 import { MoveRight } from 'lucide-react';
 import Image from 'next/image';
-import { Button } from '../ui/button';
+import PrimaryButton from '../ui/custom/PrimaryButton';
 
 export default function CallToAction() {
   return (
@@ -28,11 +28,11 @@ export default function CallToAction() {
           />
         </div>
         <div className="flex-center mt-10 gap-2">
-          <Button className="btn btn-primary rounded-sm p-5">Get for free</Button>
-          <Button variant={'ghost'} className="btn-text p-5 rounded-sm hover:bg-transparent group gap-2">
+          <PrimaryButton>Get for free</PrimaryButton>
+          <PrimaryButton variant={'ghost'} className="group gap-2 rounded-sm hover:bg-transparent">
             <span>Learn more</span>
-            <MoveRight className='duration-150 group-hover:translate-x-2' size="5" />
-          </Button>
+            <MoveRight className="duration-150 group-hover:translate-x-2" />
+          </PrimaryButton>
         </div>
       </div>
     </section>

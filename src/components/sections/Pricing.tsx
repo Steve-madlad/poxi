@@ -4,6 +4,7 @@ import { Check } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import { Card } from '../ui/card';
+import PrimaryButton from '../ui/custom/PrimaryButton';
 
 export default function Pricing() {
   return (
@@ -66,11 +67,11 @@ export default function Pricing() {
                   /mo
                 </span>
               </div>
-              <Button
+              <PrimaryButton
                 className={cn('mt-7.5', { 'bg-secondary text-secondary-foreground': tier.inverse })}
               >
                 {tier.buttonText}
-              </Button>
+              </PrimaryButton>
               <ul className="col mt-8 gap-5">
                 {tier.features.map((feature, index) => (
                   <li

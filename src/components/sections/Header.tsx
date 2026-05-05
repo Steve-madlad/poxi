@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { Menu, MoveRight } from 'lucide-react';
 import Image from 'next/image';
+import PrimaryButton from '../ui/custom/PrimaryButton';
 
 export default function Header() {
   return (
@@ -27,13 +28,11 @@ export default function Header() {
               <a href="#">Customers</a>
               <a href="#">Updates</a>
               <a href="#">Help</a>
-              <Button className="xy-center inline-flex rounded-lg bg-black p-4 font-medium tracking-tight text-white capitalize">
-                Get for free
-              </Button>
+              <PrimaryButton className="font-medium p-4.5 capitalize">Get for free</PrimaryButton>
             </nav>
 
-            <Button className='hover:bg-transparent md:hidden' variant={"ghost"}>
-              <Menu className='size-7'/>
+            <Button className="hover:bg-transparent md:hidden" variant={'ghost'}>
+              <Menu className="size-7" />
             </Button>
           </div>
         </div>
