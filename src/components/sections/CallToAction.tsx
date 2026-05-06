@@ -1,10 +1,22 @@
+'use client';
+
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { MoveRight } from 'lucide-react';
-import Image from 'next/image';
+import { useRef } from 'react';
 import PrimaryButton from '../ui/custom/PrimaryButton';
 
 export default function CallToAction() {
+  const ctaRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ctaRef,
+    offset: ['start end', 'end center'],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+  const rotationStar = useTransform(scrollYProgress, [0, 1], ['0', '40deg']);
+  const rotationSpring = useTransform(scrollYProgress, [0, 1], ['0', '-20deg']);
   return (
-    <section className="bg-linear-to-b from-white to-[#d2dcff] py-24">
+    <section ref={ctaRef} className="bg-linear-to-b from-white to-[#d2dcff] py-24">
       <div className="main-container px-5">
         <div className="section-heading relative">
           <h2 className="section-title">For free today</h2>
@@ -12,23 +24,31 @@ export default function CallToAction() {
             Celebrate the joy of accomplishment with an app designed to track your progress and
             motivate your efforts.
           </p>
-          <Image
+          <motion.img
             src="/star.png"
-            className="absolute -top-34.25 -left-87.5"
+            className="absolute size-40 sm:size-90 sm:-top-34.25 -top-30 -left-25 sm:-left-87.5"
             width={360}
             height={360}
             alt="Star Image"
+            style={{
+              translateY,
+              rotate: rotationStar,
+            }}
           />
-          <Image
+          <motion.img
             src="/spring.png"
-            className="absolute -top-4.75 -right-82.75"
+            className="absolute size-40 sm:size-90 -right-20 sm:-top-4.75 sm:-right-82.75"
             width={360}
             height={360}
             alt="Spring Image"
+            style={{
+              translateY,
+              rotate: rotationSpring,
+            }}
           />
         </div>
         <div className="flex-center mt-10 gap-2">
-          <PrimaryButton>Get for free</PrimaryButton>
+          <PrimaryButton animateFill>Get for free</PrimaryButton>
           <PrimaryButton variant={'ghost'} className="group gap-2 rounded-sm hover:bg-transparent">
             <span>Learn more</span>
             <MoveRight className="duration-150 group-hover:translate-x-2" />

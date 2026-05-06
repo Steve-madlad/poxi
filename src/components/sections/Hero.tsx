@@ -33,7 +33,7 @@ export default function Hero() {
             </p>
 
             <div className="align-center mt-7.5 gap-1">
-              <PrimaryButton>Get for free</PrimaryButton>
+              <PrimaryButton animateFill>Get for free</PrimaryButton>
               <PrimaryButton variant={'ghost'} className="group gap-2 hover:bg-transparent">
                 <span>Learn more</span>
                 <MoveRight className="duration-150 group-hover:translate-x-2" />
