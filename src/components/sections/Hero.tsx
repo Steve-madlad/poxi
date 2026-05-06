@@ -1,11 +1,23 @@
+'use client';
+
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { MoveRight } from 'lucide-react';
-import Image from 'next/image';
-import { Button } from '../ui/button';
+import { useRef } from 'react';
 import PrimaryButton from '../ui/custom/PrimaryButton';
 
 export default function Hero() {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start end', 'end start'],
+  });
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
-    <section className="flex overflow-x-clip bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] p-5 pt-10 pb-20 md:px-10 md:pt-5 md:pb-10">
+    <section
+      ref={heroRef}
+      className="flex overflow-x-clip bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] p-5 pt-10 pb-20 md:px-10 md:pt-5 md:pb-10"
+    >
       <div className="main-container">
         <div className="items-center md:flex">
           <div className="md:w-119.5">
@@ -22,35 +34,51 @@ export default function Hero() {
 
             <div className="align-center mt-7.5 gap-1">
               <PrimaryButton>Get for free</PrimaryButton>
-              <PrimaryButton variant={"ghost"} className="hover:bg-transparent group gap-2">
+              <PrimaryButton variant={'ghost'} className="group gap-2 hover:bg-transparent">
                 <span>Learn more</span>
-                <MoveRight className='group-hover:translate-x-2  duration-150' />
+                <MoveRight className="duration-150 group-hover:translate-x-2" />
               </PrimaryButton>
             </div>
             <div className=""></div>
           </div>
 
           <div className="relative mt-20 md:mt-0 md:h-162 md:flex-1">
-            <Image
+            <motion.img
               src="/cog.png"
               width={400}
               height={500}
               alt="Cog image"
-              className="md:absolute md:h-full md:w-auto md:max-w-none w-full lg:top-10 lg:-right-60 xl:top-auto xl:right-5 xl:h-full xl:w-auto"
+              className="w-full md:absolute md:h-full md:w-auto md:max-w-none lg:top-10 lg:-right-60 xl:top-auto xl:right-5 xl:h-full xl:w-auto"
+              animate={{
+                translateY: [-30, 30],
+              }}
+              transition={{
+                repeat: Infinity,
+                repeatType: 'mirror',
+                duration: 3,
+                ease: 'easeInOut',
+              }}
             />
-            <Image
+            <motion.img
               src="/cylinder.png"
-              width={220}
-              height={220}
+              width={216}
+              height={216}
               alt="Cylinder image"
-              className="-top-2 -left-32 hidden size-43 md:absolute md:right-80 md:block lg:-top-8 lg:left-auto lg:size-auto xl:right-150"
+              className="-top-2 -left-32 hidden size-43 md:absolute md:right-80 md:block lg:-top-8 lg:left-auto lg:size-54 xl:right-150"
+              style={{
+                translateY: translateY,
+              }}
             />
-            <Image
+            <motion.img
               src="/noodle.png"
               width={220}
               height={220}
               alt="Noodle image"
-              className="absolute top-131 left-112 hidden rotate-30 xl:-right-5 xl:left-auto xl:block"
+              className="absolute top-131 left-112 hidden xl:-right-5 xl:left-auto xl:block"
+              style={{
+                rotate: 30,
+                translateY: translateY,
+              }}
             />
           </div>
         </div>
