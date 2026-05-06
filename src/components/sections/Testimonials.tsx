@@ -1,5 +1,7 @@
+'use client';
+
 import { testimonials } from '@/lib/constants';
-import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Card } from '../ui/card';
 
@@ -9,7 +11,7 @@ const thirdColumn = testimonials.slice(6, 9);
 
 export default function Testimonials() {
   return (
-    <section>
+    <section className="h-220 overflow-hidden">
       <div className="main-container px-5">
         <div className="section-heading">
           <div className="just-center">
@@ -22,10 +24,15 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="just-center gap-6">
-          <TestimonialColumn column={firstColumn} />
-          <TestimonialColumn column={secondColumn} className="hidden! md:flex!" />
-          <TestimonialColumn column={thirdColumn} className="hidden! lg:flex!" />
+        <div className="just-center mt-10 max-h-160 gap-6 mask-[linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
+          <TestimonialColumn duration={8} column={firstColumn} />
+          <TestimonialColumn
+            duration={5}
+            reverse
+            column={secondColumn}
+            className="hidden! md:block!"
+          />
+          <TestimonialColumn duration={4} column={thirdColumn} className="hidden! lg:block!" />
         </div>
       </div>
     </section>
@@ -35,37 +42,50 @@ export default function Testimonials() {
 function TestimonialColumn({
   column,
   className,
+  duration = 10,
+  reverse = false,
 }: {
   column: typeof firstColumn;
   className?: string;
+  duration?: number;
+  reverse?: boolean;
 }) {
   return (
-    <div
-      className={cn(
-        'col mt-10 max-w-xs gap-6 mask-[linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]',
-        className,
-      )}
-    >
-      {[...column, ...column].map((testimonial, index) => (
-        <Card key={index} className="p-5 shadow-lg">
-          <div>
-            <div>{testimonial.text}</div>
-            <div className="align-center mt-5 gap-2">
-              <Image
-                src={testimonial.imageSrc}
-                alt="user"
-                width={40}
-                height={40}
-                className="size-10 rounded-full"
-              />
-              <div className="col">
-                <div className="tracking-light leading-5 font-medium">{testimonial.name}</div>
-                <div className="tracking-light leading-5">{testimonial.username}</div>
+    <div className={className}>
+      <motion.div
+        animate={{
+          translateY: reverse ? '0%' : '-33.33%',
+        }}
+        transition={{
+          ease: 'linear',
+          repeat: Infinity,
+          repeatType: 'loop',
+          duration: duration,
+        }}
+        initial={{ translateY: reverse ? '-33.33%' : '0' }}
+        className="col max-w-xs gap-6 pb-6"
+      >
+        {[...column, ...column, ...column].map((testimonial, index) => (
+          <Card key={index} className="p-5 shadow-lg">
+            <div>
+              <div>{testimonial.text}</div>
+              <div className="align-center mt-5 gap-2">
+                <Image
+                  src={testimonial.imageSrc}
+                  alt="user"
+                  width={40}
+                  height={40}
+                  className="size-10 rounded-full"
+                />
+                <div className="col">
+                  <div className="tracking-light leading-5 font-medium">{testimonial.name}</div>
+                  <div className="tracking-light leading-5">{testimonial.username}</div>
+                </div>
               </div>
             </div>
-          </div>
-        </Card>
-      ))}
+          </Card>
+        ))}
+      </motion.div>
     </div>
   );
 }

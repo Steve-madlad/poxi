@@ -4,29 +4,32 @@ export default function Footer() {
   return (
     <footer className="bg-black py-10 text-center text-sm text-[#bcbcbc]">
       <div className="main-container px-5">
-        <div className="relative inline-flex before:absolute before:top-2 before:bottom-0 before:w-full before:bg-[linear-gradient(to_right,#F87BFF,#fb92cf,#ffdd9b,#c2f0b1,#2fd8fe)] before:blur">
-          <Image src="/logosaas.png" className="relative" alt="logo" width={40} height={40} />
+        <div className="flex-center gap-4">
+          <div className="relative inline-flex before:absolute before:-top-1 before:bottom-0 before:-left-1 before:size-[120%] before:animate-spin before:rounded-full before:bg-[linear-gradient(to_right,#F87BFF,#fb92cf,#ffdd9b,#c2f0b1,#2fd8fe)] before:blur">
+            <Image src="/logosaas.png" className="relative" alt="logo" width={40} height={40} />
+          </div>
+          <p className="text-xl font-semibold">Poxi</p>
         </div>
-        <div className="align-start justify-center mb-10 sm:items-center! gap-6">
+        <div className="align-start mb-10 justify-center gap-6 sm:items-center!">
           <ul className="col mt-6 gap-6 sm:flex-row! sm:justify-center">
-            <li className='align-start'>
+            <li className="align-start">
               <a href="#">About</a>
             </li>
-            <li className='align-start'>
+            <li className="align-start">
               <a href="#">Features</a>
             </li>
-            <li className='align-start'>
+            <li className="align-start">
               <a href="#">Customers</a>
             </li>
           </ul>
           <ul className="col mt-6 gap-6 sm:flex-row! sm:justify-center">
-            <li className='align-start'>
+            <li className="align-start">
               <a href="#">Pricing</a>
             </li>
-            <li className='align-start'>
+            <li className="align-start">
               <a href="#">Help</a>
             </li>
-            <li className='align-start'>
+            <li className="align-start">
               <a href="#">Careers</a>
             </li>
           </ul>

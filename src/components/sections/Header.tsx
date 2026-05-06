@@ -24,7 +24,6 @@ export default function Header() {
               <Image src="/logosaas.png" alt="logo" width={40} height={40} />
               <p className='font-semibold text-xl'>Poxi</p>
             </div>
-            {/* <MediumIcon></MediumIcon> */}
             <nav className="hidden items-center gap-6 text-black/60 md:flex">
               <a href="#">About</a>
               <a href="#">Features</a>
