@@ -1,8 +1,34 @@
+'use client';
+
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 
 export default function ProductShowcase() {
+  const showcaseRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: showcaseRef,
+    offset: ['start end', 'end start'],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -159]);
+
+  const [rotate, setRotate] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setRotate(window.innerWidth < 768 ? 45 : 0);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <section className="overflow-x-clip bg-linear-to-b from-white to-[#d3dcff] py-24">
+    <section
+      ref={showcaseRef}
+      className="overflow-x-clip bg-linear-to-b from-white to-[#d3dcff] py-24"
+    >
       <div className="main-container">
         <div className="section-heading px-5">
           <div className="just-center">
@@ -22,19 +48,26 @@ export default function ProductShowcase() {
             className="object-contain"
             priority
           />
-          <Image
-            className="absolute -top-15 left-0 size-25 rotate-45 sm:size-35 md:top-auto md:-left-10 md:size-40 md:rotate-none lg:-left-5 lg:size-45 xl:size-60 2xl:left-35"
+          <motion.img
+            className="absolute -top-15 left-0 size-25 sm:size-35 md:top-auto md:-left-10 md:size-40 lg:-left-5 lg:size-45 xl:size-60 2xl:left-35"
             src="/pyramid.png"
             alt="pramid"
             width={262}
             height={262}
+            style={{
+              translateY,
+              rotate
+            }}
           />
-          <Image
+          <motion.img
             className="absolute right-0 -bottom-15 size-25 sm:size-35 md:-right-5 md:size-40 md:border-0 lg:-right-10 lg:size-45 xl:size-60 2xl:right-35"
             src="/tube.png"
             alt="tube"
             width={262}
             height={262}
+            style={{
+              translateY,
+            }}
           />
         </div>
       </div>

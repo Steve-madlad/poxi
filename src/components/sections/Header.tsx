@@ -20,7 +20,10 @@ export default function Header() {
       <div className="flex-center p-5 md:px-10">
         <div className="container">
           <div className="flex-between">
-            <Image src="/logosaas.png" alt="logo" width={40} height={40} />
+            <div className='align-center gap-4 '>
+              <Image src="/logosaas.png" alt="logo" width={40} height={40} />
+              <p className='font-semibold text-xl'>Poxi</p>
+            </div>
             {/* <MediumIcon></MediumIcon> */}
             <nav className="hidden items-center gap-6 text-black/60 md:flex">
               <a href="#">About</a>

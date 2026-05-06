@@ -46,7 +46,7 @@ function TestimonialColumn({
         className,
       )}
     >
-      {column.map((testimonial, index) => (
+      {[...column, ...column].map((testimonial, index) => (
         <Card key={index} className="p-5 shadow-lg">
           <div>
             <div>{testimonial.text}</div>
