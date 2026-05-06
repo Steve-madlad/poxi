@@ -20,9 +20,9 @@ export default function Header() {
       <div className="flex-center p-5 md:px-10">
         <div className="container">
           <div className="flex-between">
-            <div className='align-center gap-4 '>
+            <div className="align-center gap-4">
               <Image src="/logosaas.png" alt="logo" width={40} height={40} />
-              <p className='font-semibold text-xl'>Poxi</p>
+              <p className="text-xl font-semibold">Poxi</p>
             </div>
             <nav className="hidden items-center gap-6 text-black/60 md:flex">
               <a href="#">About</a>
@@ -30,7 +30,7 @@ export default function Header() {
               <a href="#">Customers</a>
               <a href="#">Updates</a>
               <a href="#">Help</a>
-              <PrimaryButton className="font-medium p-4.5 capitalize">Get for free</PrimaryButton>
+              <PrimaryButton className="p-4.5 font-medium capitalize">Get for free</PrimaryButton>
             </nav>
 
             <Button className="hover:bg-transparent md:hidden" variant={'ghost'}>

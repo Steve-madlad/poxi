@@ -95,7 +95,8 @@ export default function Pricing() {
                 </div>
                 <PrimaryButton
                   className={cn('mt-7.5 w-full', {
-                    'bg-transparent backdrop-blur-lg hover:bg-secondary hover:text-secondary-foreground duration-150 shadow-md': tier.inverse,
+                    'hover:bg-secondary hover:text-secondary-foreground bg-transparent shadow-md backdrop-blur-lg duration-150':
+                      tier.inverse,
                   })}
                 >
                   {tier.buttonText}

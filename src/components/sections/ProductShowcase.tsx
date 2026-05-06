@@ -56,7 +56,7 @@ export default function ProductShowcase() {
             height={262}
             style={{
               translateY,
-              rotate
+              rotate,
             }}
           />
           <motion.img
