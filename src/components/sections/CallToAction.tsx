@@ -14,7 +14,6 @@ export default function CallToAction() {
 
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
   const rotationStar = useTransform(scrollYProgress, [0, 1], ['0', '40deg']);
-  const rotationSpring = useTransform(scrollYProgress, [0, 1], ['0', '-20deg']);
   return (
     <section ref={ctaRef} className="bg-linear-to-b from-white to-[#d2dcff] py-24">
       <div className="main-container px-5">
@@ -26,7 +25,7 @@ export default function CallToAction() {
           </p>
           <motion.img
             src="/star.png"
-            className="absolute size-40 sm:size-90 sm:-top-34.25 -top-30 -left-25 sm:-left-87.5"
+            className="absolute -top-30 -left-25 size-40 sm:-top-34.25 sm:-left-87.5 sm:size-90"
             width={360}
             height={360}
             alt="Star Image"
@@ -37,13 +36,12 @@ export default function CallToAction() {
           />
           <motion.img
             src="/spring.png"
-            className="absolute size-40 sm:size-90 -right-20 sm:-top-4.75 sm:-right-82.75"
+            className="absolute -right-20 size-40 sm:-top-4.75 sm:-right-82.75 sm:size-90"
             width={360}
             height={360}
             alt="Spring Image"
             style={{
               translateY,
-              rotate: rotationSpring,
             }}
           />
         </div>
