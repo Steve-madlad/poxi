@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { DM_Sans } from 'next/font/google';
 import './globals.css';
 
@@ -6,6 +6,12 @@ const dmSans = DM_Sans({
   variable: '--font-dm-sans',
   subsets: ['latin'],
 });
+
+export const viewport: Viewport = {
+  themeColor: '#2347c5',
+  width: 'device-width',
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: 'Poxi',
@@ -15,12 +21,7 @@ export const metadata: Metadata = {
   creator: 'Steeve',
   category: 'productivity',
   applicationName: 'Poxi',
-  themeColor: '#2347c5',
   publisher: 'Steeve',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-  },
   formatDetection: {
     email: false,
     address: false,
