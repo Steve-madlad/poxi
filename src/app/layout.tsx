@@ -10,7 +10,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: 'Poxi',
   description:
-    'Transform the way you work. Our innovative tool offers top-notch customizability and robust features to help you track progress, manage projects, and hit every deadline. User-friendly, highly integrable, and built for modern teams. Get started for free today.',
+    'Transform your workflow with our customizable and robust project management tool. Track progress, manage projects, and hit deadlines with ease. User-friendly, highly integrable, and built for modern teams. Start for free today!',
   authors: [{ name: 'Poxi Team' }],
   creator: 'Steeve',
   category: 'productivity',
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Poxi - track your progress, motivate your efforts and realize your goals',
+    title: 'Poxi - Track your progress, motivate yourself and realize your goals',
     description:
-      'Transform the way you work. Our innovative tool offers top-notch customizability and robust features to help you track progress, manage projects, and hit every deadline. User-friendly, highly integrable, and built for modern teams. Get started for free today.',
+      'Transform your workflow with our customizable and robust project management tool. Track progress, manage projects, and hit deadlines with ease. User-friendly, highly integrable, and built for modern teams. Start for free today!',
     url: 'https://poxify.vercel.app',
     siteName: 'Poxi',
     images: [
