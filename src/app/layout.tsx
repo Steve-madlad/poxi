@@ -16,7 +16,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'Poxi',
   description:
-    'Transform your workflow with our customizable and robust project management tool. Track progress, manage projects, and hit deadlines with ease. User-friendly, highly integrable, and built for modern teams. Start for free today!',
+    'Streamline projects, track progress, and collaborate effortlessly with Poxi’s customizable project management platform for modern teams.',
   authors: [{ name: 'Poxi Team' }],
   creator: 'Steeve',
   category: 'productivity',
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Poxi - Track your progress, motivate yourself and realize your goals',
+    title: 'Poxi – Modern Project Management for Agile Teams',
     description:
-      'Transform your workflow with our customizable and robust project management tool. Track progress, manage projects, and hit deadlines with ease. User-friendly, highly integrable, and built for modern teams. Start for free today!',
+      'Streamline projects, track progress, and collaborate effortlessly with Poxi’s customizable project management platform for modern teams.',
     url: 'https://poxify.vercel.app',
     siteName: 'Poxi',
     images: [
