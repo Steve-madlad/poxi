@@ -42,7 +42,7 @@ export default function ProductShowcase() {
         </div>
         <div className="3xl:max-h-200 relative mx-auto mt-10 aspect-video max-h-100 w-full md:max-h-150 lg:max-h-165">
           <Image
-            src="/product-image.png"
+            src="/product-image.webp"
             fill
             alt="Product Image"
             className="object-contain"
@@ -61,7 +61,7 @@ export default function ProductShowcase() {
           />
           <motion.img
             className="absolute right-0 -bottom-15 size-25 sm:size-35 md:-right-5 md:size-40 md:border-0 lg:-right-10 lg:size-45 xl:size-60 2xl:right-35"
-            src="/tube.png"
+            src="/tube.webp"
             alt="tube"
             width={262}
             height={262}

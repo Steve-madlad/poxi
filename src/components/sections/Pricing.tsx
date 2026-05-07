@@ -29,7 +29,7 @@ export default function Pricing() {
 
         <motion.img
           className="absolute -left-10 hidden md:block lg:-left-25 lg:size-70 2xl:size-87.5"
-          src="/dollar-sign.png"
+          src="/dollar-sign.webp"
           width={350}
           height={350}
           alt="Dollar Sign"
@@ -37,7 +37,7 @@ export default function Pricing() {
         />
         <motion.img
           className="absolute top-1/2 -right-10 size-50 scale-y-[-1] lg:-right-50 lg:bottom-10 lg:size-70 2xl:size-87.5"
-          src="/dollar-sign.png"
+          src="/dollar-sign.webp"
           width={350}
           height={350}
           alt="Dollar Sign"
@@ -54,14 +54,14 @@ export default function Pricing() {
             >
               <motion.div
                 className={cn('size-full p-8', {
-                  "border-black bg-[url('/gloss10.png')] bg-repeat-x text-white shadow-2xl":
+                  "border-black bg-[url('/gloss2.webp')] bg-repeat-x text-white shadow-2xl":
                     tier.inverse,
                 })}
-                animate={{ backgroundPosition: ['0px 0px', '-2028px 0px'] }}
+                animate={{ backgroundPosition: ['0px 0px', '-1254px 0px'] }}
                 transition={{
                   repeat: Infinity,
                   repeatType: 'loop',
-                  duration: 20,
+                  duration: 15,
                   ease: 'linear',
                 }}
               >

@@ -44,7 +44,7 @@ export default function Hero() {
 
           <div className="relative mt-20 md:mt-0 md:h-162 md:flex-1">
             <motion.img
-              src="/cog.png"
+              src="/cog.webp"
               width={400}
               height={500}
               alt="Cog image"
@@ -70,7 +70,7 @@ export default function Hero() {
               }}
             />
             <motion.img
-              src="/noodle.png"
+              src="/noodle.webp"
               width={220}
               height={220}
               alt="Noodle image"

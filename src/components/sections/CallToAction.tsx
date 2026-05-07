@@ -24,7 +24,7 @@ export default function CallToAction() {
             motivate your efforts.
           </p>
           <motion.img
-            src="/star.png"
+            src="/star.webp"
             className="absolute -top-30 -left-25 size-40 sm:-top-34.25 sm:-left-87.5 sm:size-90"
             width={360}
             height={360}
@@ -35,7 +35,7 @@ export default function CallToAction() {
             }}
           />
           <motion.img
-            src="/spring.png"
+            src="/spring.webp"
             className="absolute -right-20 size-40 sm:-top-4.75 sm:-right-82.75 sm:size-90"
             width={360}
             height={360}
