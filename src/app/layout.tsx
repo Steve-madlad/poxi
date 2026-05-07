@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'Poxi',
     images: [
       {
-        url: '/poxi.png',
+        url: '/poxi.webp',
         width: 1200,
         height: 630,
         alt: 'Poxi | Innovative Project Management Tool',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: 'Poxi | Innovative Project Management Tool',
     description:
       'Stay organized, collaborate seamlessly, and hit every deadline with Poxi — your all-in-one productivity workspace.',
-    images: ['/poxi.png'],
+    images: ['/poxi.webp'],
     creator: '@Theblackguy_1',
   },
   robots: {
